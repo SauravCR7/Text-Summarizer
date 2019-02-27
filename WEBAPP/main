@@ -1,0 +1,36 @@
+from nltk.corpus import stopwords
+from nltk.cluster.util import cosine_distance
+import numpy as np
+import networkx as nx
+from flask import Flask,render_template,request
+app=Flask(__name__)
+
+@app.route('/summarize', methods=['GET','POST'])
+def summarize():
+    if request.method == 'POST':
+        text=request.form['text']
+        return render_template("summary.html",text=text)
+
+@app.route('/')
+def main():
+    return render_template("form.html")
+
+if __name__=="__main__":
+    app.run(debug=True)
+'''
+from flask import Flask,render_template,request
+app=Flask(__name__)
+
+@app.route('/summarize', methods=['GET','POST'])
+def summarize():
+    if request.method == 'POST':
+        text=request.form['text']
+        return render_template("summary.html",text=text)
+
+@app.route('/')
+def main():
+    return render_template("form.html")
+
+if __name__=="__main__":
+    app.run(debug=True)
+'''

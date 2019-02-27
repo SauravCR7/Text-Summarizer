@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>SUMMARY</title>
+</head>
+<body>
+<h1> SUMMARIZED :</h1><br><br>
+<fieldset>
+<legend><h3>Original Text</h3></legend>
+    {% for i in text: %}
+{% if(i=='\n') %}
+    <br>
+{%endif%}
+{% if(i==' ') %}
+{%endif%}
+{% print i %}
+{% endfor %}
+</fieldset>
+<fieldset>
+    <legend><h3>Summary</h3></legend>
+
+
+</fieldset>
+</body>
+</html>
