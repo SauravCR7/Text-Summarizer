@@ -5,9 +5,10 @@
     <title>SUMMARY</title>
 </head>
 <body>
-<h1> SUMMARIZED :</h1><br><br>
-<fieldset>
-<legend><h3>Original Text</h3></legend>
+<div style="background-color:lightblue"> <h1>SUMMARIZED :<br></h1></div>
+
+<fieldset style="background-color:yellow">
+<legend><h2>Original Text</h2></legend>
 <!--
     {% for i in text: %}
 {% if(i=='\n') %}
@@ -17,10 +18,11 @@
 {%endif%}
 {% print i %}
 {% endfor %}
--->{{ text }}
+--><font size="4">{{ text }}</font>
 </fieldset>
-<fieldset>
-    <legend><h3>Summary</h3></legend>
+<fieldset style="background-color:tomato">
+    <legend><h2>Summary</h2></legend>
+<font size="5">
 {% for i in scam: %}
 {% if(i=='\n') %}
     <br>
@@ -29,7 +31,8 @@
 {%endif%}
 {% print i %}
 {% endfor %}
-
+.<br>
+</font>
 </fieldset>
 </body>
 </html>

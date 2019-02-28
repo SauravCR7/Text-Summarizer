@@ -1,14 +1,97 @@
-<html>
+ <html>
 <head>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+.bgimg-1{
+  position: relative;
+ /* opacity: 0.85; */ 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("static/particle.gif");
+  height: 95%;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 60px;
+}
+
+.caption span.border {
+  color: white;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: black;
+}
+
+.topnav a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.topnav a:hover {
+  background-color: white;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: white;
+  color: black;
+}
+</style>
+
     <title>TEXT</title>
 </head>
-<body bgcolor="lightblue">
-<h1>Enter text to summarize:</h1>
+<body style="background-image: linear-gradient(black,lightblue);">
+<div class="topnav">
+  <a class="active" href="#home">Home</a>
+
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+</div>
+
+<a href="#sum" class="bgimg-1">
+<div class="bgimg-1">
+	
+  <div class="caption">
+    TEXT SUMMARIZER
+  </div>
+</div>
+</a>
+
+<br><br>
+<a name="sum">
+<h1 style="color:white">Enter text to summarize:</h1></a>
+  
    <form method="POST" action="/summarize">
        <div class="form-group">
-           <textarea name="text" rows="15" cols="140">
+           <textarea name="text" rows="15" cols="140" style="background-color:white">
 
            </textarea>
        </div>
