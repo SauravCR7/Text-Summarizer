@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>SUMMARY</title>
 </head>
 <body>
 <div style="background-color:lightblue"> <h1>SUMMARIZED :<br></h1></div>
+<br>
 
 <fieldset style="background-color:yellow">
 <legend><h2>Original Text</h2></legend>
@@ -20,6 +22,7 @@
 {% endfor %}
 --><font size="4">{{ text }}</font>
 </fieldset>
+<br>
 <fieldset style="background-color:tomato">
     <legend><h2>Summary</h2></legend>
 <font size="5">
@@ -33,6 +36,7 @@
 {% endfor %}
 .<br>
 </font>
+    <br>
 </fieldset>
 <br><br>
 <form method="POST" action="/">
