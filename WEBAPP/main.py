@@ -99,7 +99,7 @@ def summarize():
         scam=generate_summary( text, 3)
         return render_template("summary.html",text=text,scam=scam)
 
-@app.route('/')
+@app.route('/' , methods=['GET','POST'])
 def main():
     return render_template("form.html")
 
